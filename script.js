@@ -29,21 +29,25 @@ const removeItem = (id) => {
 };
 
 onValue(dbRef, (snapshot) => {
-  shoppingList.innerHTML = "";
+  if (snapshot.exists() === true) {
+    shoppingList.innerHTML = "";
 
-  let data = snapshot.val();
-  let allItems = Object.entries(data);
+    let data = snapshot.val();
+    let allItems = Object.entries(data);
 
-  allItems.forEach((item) => {
-    const ID = item[0];
-    const itemValue = item[1];
-    const newItem = document.createElement("li");
-    newItem.textContent = itemValue;
-    newItem.addEventListener("click", () => {
-      removeItem(ID);
+    allItems.forEach((item) => {
+      const ID = item[0];
+      const itemValue = item[1];
+      const newItem = document.createElement("li");
+      newItem.textContent = itemValue;
+      newItem.addEventListener("click", () => {
+        removeItem(ID);
+      });
+      shoppingList.appendChild(newItem);
     });
-    shoppingList.appendChild(newItem);
-  });
+  } else {
+    shoppingList.innerHTML = "No items in list.";
+  }
 });
 
 // Append item to html
