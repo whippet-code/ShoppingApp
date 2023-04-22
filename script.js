@@ -1,5 +1,4 @@
 // imports
-require("dotenv").config();
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {
   getDatabase,
@@ -11,7 +10,8 @@ import {
 
 // Initialize Firebase
 const DBConfig = {
-  databaseURL: process.env("DATABASE_URL"),
+  databaseURL:
+    "https://playground-e8497-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
 const app = initializeApp(DBConfig);
