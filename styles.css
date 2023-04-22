@@ -1,87 +1,88 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik', sans-serif;
-    background-color: #EEF0F4;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  background-color: #fff;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 320px;
-    margin: 30px auto;
-    border: 5px solid #68ac48;
-    border-radius: 8px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 30px auto;
+  border: 5px solid #68ac48;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #eef0f4;
 }
 
 img {
-    width: 150px;
-    margin: 0 auto;
-    border-radius: 8px;
-    border: 2px solid #68ac48;
+  width: 200px;
+  margin: 30px auto;
+  padding: 8px;
 }
 
 input {
-    color: #26411a;
-    background-color: #DCE1EB;
-    border: 0;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Monsterrat', sans-serif;
-    margin: 10px 0;
+  color: #26411a;
+  background-color: #dce1eb;
+  border: 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Monsterrat", sans-serif;
+  margin: 10px 0;
 }
 
 input:focus {
-    outline: 2px solid #68ac48;
+  outline: 2px solid #68ac48;
 }
 
 button {
-    color: #FDFDFD;
-    background-color: #68ac48;
-    border: 0;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Monsterrat', sans-serif;
+  color: #fdfdfd;
+  background-color: #68ac48;
+  border: 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Monsterrat", sans-serif;
 }
 
 button:hover {
-    background-color: #57933c;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #57933c;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 p {
-    font-size: 15px;
-    color: #26411a;
-    text-align: center;
-    margin: 5px 0;
+  font-size: 15px;
+  color: #26411a;
+  text-align: center;
+  margin: 5px 0;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 ul li {
-  font-family: 'roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    background-color: #FFFDF8;
-    color: #26411a;
-    padding: 15px;
-    border-radius: 8px;
-    flex-grow: 1;
-    text-align: center;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  background-color: #fffdf8;
+  color: #26411a;
+  padding: 15px;
+  border-radius: 8px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 li:hover {
-    background-color: #ff8d8d;
+  background-color: #ff8d8d;
 }
