@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
-  background-color: #fff;
+  background-color: #dcead5;
+  user-select: none;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
 }
 
 img {
-  width: 200px;
+  width: 250px;
   margin: 30px auto;
   padding: 8px;
 }
@@ -51,8 +52,10 @@ button {
 }
 
 button:hover {
-  background-color: #57933c;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #7ace53;
+  box-shadow: 0px 1px 4px #26411a;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 p {
@@ -80,9 +83,10 @@ ul li {
   border-radius: 8px;
   flex-grow: 1;
   text-align: center;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px #26411a;
 }
 
 li:hover {
   background-color: #ff8d8d;
+  cursor: pointer;
 }
