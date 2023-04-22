@@ -28,17 +28,23 @@ const removeItem = (id) => {
   remove(ref(db, `shoppingList/${id}`));
 };
 
-// Get items from DB
-const getItems = () => {
+onValue(dbRef, (snapshot) => {
   shoppingList.innerHTML = "";
-  onValue(dbRef, (snapshot) => {
-    let data = snapshot.val();
-    let allItems = Object.entries(data);
-    allItems.forEach((item) => {
-      shoppingList.innerHTML += appendItem(item);
+
+  let data = snapshot.val();
+  let allItems = Object.entries(data);
+
+  allItems.forEach((item) => {
+    const ID = item[0];
+    const itemValue = item[1];
+    const newItem = document.createElement("li");
+    newItem.textContent = itemValue;
+    newItem.addEventListener("click", () => {
+      removeItem(ID);
     });
+    shoppingList.appendChild(newItem);
   });
-};
+});
 
 // Append item to html
 const appendItem = (item) => {
@@ -62,17 +68,4 @@ addBtn.addEventListener("click", () => {
   clearInput();
   //add item to db
   addItem(userInputValue);
-  //get items from db
-  getItems();
 });
-
-// event listener function to add to each list item when added
-shoppingList.addEventListener("click", (e) => {
-  let id = e.target.id;
-  removeItem(id);
-
-  //get items from db
-  getItems();
-});
-
-getItems();
