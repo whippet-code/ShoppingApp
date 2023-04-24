@@ -73,3 +73,14 @@ addBtn.addEventListener("click", () => {
   //add item to db
   addItem(userInputValue);
 });
+
+// Add event listener to return key press
+userInput.addEventListener("keypress", (e) => {
+  // If the user presses the "Enter" key on the keyboard
+  if (e.key === "Enter") {
+    // Cancel the default action.
+    e.preventDefault();
+    // Trigger the add button with a click
+    addBtn.click();
+  }
+});
